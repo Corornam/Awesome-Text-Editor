@@ -1,0 +1,115 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/RenameDialogBox.gd" type="Script" id=2]
+
+[node name="RenameDialogBox" type="PopupPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -150.0
+margin_top = -75.0
+margin_right = 150.0
+margin_bottom = 75.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -146.0
+margin_top = -71.0
+margin_right = 146.0
+margin_bottom = 71.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control2" type="Control" parent="CenterContainer"]
+margin_right = 292.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Title" type="Label" parent="CenterContainer"]
+margin_top = 19.0
+margin_right = 292.0
+margin_bottom = 33.0
+text = "[title]"
+align = 1
+
+[node name="Control3" type="Control" parent="CenterContainer"]
+margin_top = 37.0
+margin_right = 292.0
+margin_bottom = 52.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LineEditName" type="LineEdit" parent="CenterContainer"]
+margin_top = 56.0
+margin_right = 292.0
+margin_bottom = 80.0
+max_length = 30
+virtual_keyboard_enabled = false
+placeholder_text = "[Placeholder]"
+
+[node name="Control4" type="Control" parent="CenterContainer"]
+margin_top = 84.0
+margin_right = 292.0
+margin_bottom = 99.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer"]
+margin_top = 103.0
+margin_right = 292.0
+margin_bottom = 123.0
+alignment = 1
+
+[node name="Control3" type="Control" parent="CenterContainer/HBoxContainer"]
+margin_right = 63.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ButtonOK" type="Button" parent="CenterContainer/HBoxContainer"]
+margin_left = 67.0
+margin_right = 98.0
+margin_bottom = 20.0
+text = "OK"
+
+[node name="Control" type="Control" parent="CenterContainer/HBoxContainer"]
+margin_left = 102.0
+margin_right = 166.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ButtonCancel" type="Button" parent="CenterContainer/HBoxContainer"]
+margin_left = 170.0
+margin_right = 224.0
+margin_bottom = 20.0
+text = "Cancel"
+
+[node name="Control2" type="Control" parent="CenterContainer/HBoxContainer"]
+margin_left = 228.0
+margin_right = 292.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Control" type="Control" parent="CenterContainer"]
+margin_top = 127.0
+margin_right = 292.0
+margin_bottom = 142.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="text_entered" from="CenterContainer/LineEditName" to="." method="_on_LineEdit_text_entered"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/ButtonOK" to="." method="_on_ButtonOK_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/ButtonCancel" to="." method="_on_ButtonCancel_pressed"]

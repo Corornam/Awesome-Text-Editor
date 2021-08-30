@@ -1,0 +1,411 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/FileSystem.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Icons/ArrowUp_x64.png" type="Texture" id=2]
+[ext_resource path="res://Resources/Fonts/Inconsolata-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 3 )
+
+[node name="FileSystem" type="PopupPanel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -352.0
+margin_top = -380.0
+margin_right = 352.0
+margin_bottom = 356.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="VBoxContainer" parent="."]
+anchor_left = 0.506757
+anchor_top = 0.506173
+anchor_right = 0.506757
+anchor_bottom = 0.506173
+margin_left = -352.757
+margin_top = -368.543
+margin_right = 343.243
+margin_bottom = 359.457
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C" type="Control" parent="Control"]
+margin_right = 696.0
+margin_bottom = 22.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Title" type="Label" parent="Control"]
+margin_top = 26.0
+margin_right = 696.0
+margin_bottom = 40.0
+text = "[Sample]"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C2" type="Control" parent="Control"]
+margin_top = 44.0
+margin_right = 696.0
+margin_bottom = 67.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToolBar" type="HBoxContainer" parent="Control"]
+margin_top = 71.0
+margin_right = 696.0
+margin_bottom = 95.0
+alignment = 1
+
+[node name="C" type="Control" parent="Control/ToolBar"]
+margin_right = 12.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonBack" type="Button" parent="Control/ToolBar"]
+margin_left = 16.0
+margin_right = 40.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+focus_mode = 0
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C2" type="Control" parent="Control/ToolBar"]
+margin_left = 44.0
+margin_right = 56.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PathLabel" type="Label" parent="Control/ToolBar"]
+margin_left = 60.0
+margin_top = 5.0
+margin_right = 92.0
+margin_bottom = 19.0
+text = "Path:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PathLineEdit" type="LineEdit" parent="Control/ToolBar"]
+margin_left = 96.0
+margin_right = 576.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 480, 0 )
+virtual_keyboard_enabled = false
+clear_button_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C3" type="Control" parent="Control/ToolBar"]
+margin_left = 580.0
+margin_right = 592.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNewFolder" type="Button" parent="Control/ToolBar"]
+margin_left = 596.0
+margin_right = 680.0
+margin_bottom = 24.0
+text = "New Folder"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C4" type="Control" parent="Control/ToolBar"]
+margin_left = 684.0
+margin_right = 696.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C3" type="Control" parent="Control"]
+margin_top = 99.0
+margin_right = 696.0
+margin_bottom = 107.0
+rect_min_size = Vector2( 0, 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FileTree" type="Tree" parent="Control"]
+margin_top = 111.0
+margin_right = 696.0
+margin_bottom = 611.0
+rect_min_size = Vector2( 0, 500 )
+allow_rmb_select = true
+hide_folding = true
+hide_root = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ERROR" type="Label" parent="Control/FileTree"]
+margin_left = 216.0
+margin_top = 448.0
+margin_right = 680.0
+margin_bottom = 472.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 0.627451 )
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerERROR" type="Timer" parent="Control/FileTree"]
+wait_time = 5.0
+one_shot = true
+
+[node name="C4" type="Control" parent="Control"]
+margin_top = 615.0
+margin_right = 696.0
+margin_bottom = 623.0
+rect_min_size = Vector2( 0, 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FilePanel" type="HBoxContainer" parent="Control"]
+margin_top = 627.0
+margin_right = 696.0
+margin_bottom = 651.0
+
+[node name="C" type="Control" parent="Control/FilePanel"]
+margin_right = 53.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="File" type="Label" parent="Control/FilePanel"]
+margin_left = 57.0
+margin_top = 5.0
+margin_right = 84.0
+margin_bottom = 19.0
+text = "File:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FileLineEdit" type="LineEdit" parent="Control/FilePanel"]
+margin_left = 88.0
+margin_right = 638.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 550, 0 )
+
+[node name="C2" type="Control" parent="Control/FilePanel"]
+margin_left = 642.0
+margin_right = 696.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C5" type="Control" parent="Control"]
+margin_top = 655.0
+margin_right = 696.0
+margin_bottom = 677.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BottomPanel" type="HBoxContainer" parent="Control"]
+margin_top = 681.0
+margin_right = 696.0
+margin_bottom = 701.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C" type="Control" parent="Control/BottomPanel"]
+margin_right = 195.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ButtonSave" type="Button" parent="Control/BottomPanel"]
+margin_left = 199.0
+margin_right = 240.0
+margin_bottom = 20.0
+text = "Save"
+
+[node name="C2" type="Control" parent="Control/BottomPanel"]
+margin_left = 244.0
+margin_right = 439.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ButtonCancel" type="Button" parent="Control/BottomPanel"]
+margin_left = 443.0
+margin_right = 497.0
+margin_bottom = 20.0
+text = "Cancel"
+
+[node name="C3" type="Control" parent="Control/BottomPanel"]
+margin_left = 501.0
+margin_right = 696.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="C6" type="Control" parent="Control"]
+margin_top = 705.0
+margin_right = 696.0
+margin_bottom = 728.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FileExistsPopup" type="PopupPanel" parent="."]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -118.0
+margin_top = -54.0
+margin_right = 118.0
+margin_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="FileExistsPopup"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C" type="Control" parent="FileExistsPopup/VBoxContainer"]
+margin_right = 228.0
+margin_bottom = 11.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Title" type="Label" parent="FileExistsPopup/VBoxContainer"]
+margin_top = 15.0
+margin_right = 228.0
+margin_bottom = 46.0
+text = "File already exists!
+Do you want to overwrite it?"
+align = 1
+valign = 1
+
+[node name="C2" type="Control" parent="FileExistsPopup/VBoxContainer"]
+margin_top = 50.0
+margin_right = 228.0
+margin_bottom = 61.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="FileExistsPopup/VBoxContainer"]
+margin_top = 65.0
+margin_right = 228.0
+margin_bottom = 85.0
+alignment = 1
+
+[node name="C" type="Control" parent="FileExistsPopup/VBoxContainer/HBoxContainer"]
+margin_right = 49.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ButtonYes" type="Button" parent="FileExistsPopup/VBoxContainer/HBoxContainer"]
+margin_left = 53.0
+margin_right = 87.0
+margin_bottom = 20.0
+text = "Yes"
+
+[node name="C2" type="Control" parent="FileExistsPopup/VBoxContainer/HBoxContainer"]
+margin_left = 91.0
+margin_right = 140.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ButtonNo" type="Button" parent="FileExistsPopup/VBoxContainer/HBoxContainer"]
+margin_left = 144.0
+margin_right = 174.0
+margin_bottom = 20.0
+text = "No"
+
+[node name="C3" type="Control" parent="FileExistsPopup/VBoxContainer/HBoxContainer"]
+margin_left = 178.0
+margin_right = 228.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="C3" type="Control" parent="FileExistsPopup/VBoxContainer"]
+margin_top = 89.0
+margin_right = 228.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[connection signal="popup_hide" from="." to="." method="_on_FileSystem_popup_hide"]
+[connection signal="pressed" from="Control/ToolBar/ButtonBack" to="." method="_on_ButtonBack_pressed"]
+[connection signal="text_entered" from="Control/ToolBar/PathLineEdit" to="." method="_on_PathLineEdit_text_entered"]
+[connection signal="pressed" from="Control/ToolBar/ButtonNewFolder" to="." method="_on_ButtonNewFolder_pressed"]
+[connection signal="item_activated" from="Control/FileTree" to="." method="_on_FileTree_item_activated"]
+[connection signal="item_selected" from="Control/FileTree" to="." method="_on_FileTree_item_selected"]
+[connection signal="timeout" from="Control/FileTree/TimerERROR" to="." method="_on_TimerERROR_timeout"]
+[connection signal="pressed" from="Control/BottomPanel/ButtonSave" to="." method="_on_ButtonSave_pressed"]
+[connection signal="pressed" from="Control/BottomPanel/ButtonCancel" to="." method="_on_ButtonCancel_pressed"]
+[connection signal="pressed" from="FileExistsPopup/VBoxContainer/HBoxContainer/ButtonYes" to="." method="_on_ButtonYes_pressed"]
+[connection signal="pressed" from="FileExistsPopup/VBoxContainer/HBoxContainer/ButtonNo" to="." method="_on_ButtonNo_pressed"]

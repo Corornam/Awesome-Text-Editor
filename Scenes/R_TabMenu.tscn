@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/R_TabMenu.gd" type="Script" id=2]
+
+[node name="R_TabMenu" type="PopupMenu"]
+margin_right = 64.0
+margin_bottom = 64.0
+items = [ "Save", null, 0, false, false, 0, 0, null, "", false, "Rename", null, 0, false, false, 1, 0, null, "", false, "Close", null, 0, false, false, 2, 0, null, "", false ]
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

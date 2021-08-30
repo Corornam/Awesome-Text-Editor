@@ -1,0 +1,549 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scripts/PreferencesMenu.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Fonts/Inconsolata-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[node name="PreferencesMenu" type="PopupPanel"]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -352.0
+margin_top = -368.0
+margin_right = 352.0
+margin_bottom = 368.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 4.0
+margin_right = -4.0
+margin_bottom = -4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C" type="Control" parent="VBoxContainer"]
+margin_right = 696.0
+margin_bottom = 17.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Title" type="Label" parent="VBoxContainer"]
+margin_top = 21.0
+margin_right = 696.0
+margin_bottom = 35.0
+text = "Preferences"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="C2" type="Control" parent="VBoxContainer"]
+margin_top = 39.0
+margin_right = 696.0
+margin_bottom = 57.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="OptionsTabs" type="TabContainer" parent="VBoxContainer"]
+margin_top = 61.0
+margin_right = 696.0
+margin_bottom = 661.0
+rect_min_size = Vector2( 0, 600 )
+tab_align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="General" type="VBoxContainer" parent="VBoxContainer/OptionsTabs"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="C" type="Control" parent="VBoxContainer/OptionsTabs/General"]
+margin_right = 688.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 0, 8 )
+
+[node name="DefaultProjectName" type="HBoxContainer" parent="VBoxContainer/OptionsTabs/General"]
+margin_top = 12.0
+margin_right = 688.0
+margin_bottom = 36.0
+alignment = 1
+
+[node name="C2" type="Control" parent="VBoxContainer/OptionsTabs/General/DefaultProjectName"]
+margin_right = 8.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="Label" type="Label" parent="VBoxContainer/OptionsTabs/General/DefaultProjectName"]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 147.0
+margin_bottom = 19.0
+text = "Default project name"
+
+[node name="C" type="Control" parent="VBoxContainer/OptionsTabs/General/DefaultProjectName"]
+margin_left = 151.0
+margin_right = 372.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/OptionsTabs/General/DefaultProjectName"]
+margin_left = 376.0
+margin_right = 676.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 300, 0 )
+
+[node name="C3" type="Control" parent="VBoxContainer/OptionsTabs/General/DefaultProjectName"]
+margin_left = 680.0
+margin_right = 688.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="DefaultNewDirName" type="HBoxContainer" parent="VBoxContainer/OptionsTabs/General"]
+margin_top = 40.0
+margin_right = 688.0
+margin_bottom = 64.0
+alignment = 1
+
+[node name="C2" type="Control" parent="VBoxContainer/OptionsTabs/General/DefaultNewDirName"]
+margin_right = 8.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="Label" type="Label" parent="VBoxContainer/OptionsTabs/General/DefaultNewDirName"]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 189.0
+margin_bottom = 19.0
+text = "Default new directory name"
+
+[node name="C" type="Control" parent="VBoxContainer/OptionsTabs/General/DefaultNewDirName"]
+margin_left = 193.0
+margin_right = 372.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/OptionsTabs/General/DefaultNewDirName"]
+margin_left = 376.0
+margin_right = 676.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 300, 0 )
+
+[node name="C3" type="Control" parent="VBoxContainer/OptionsTabs/General/DefaultNewDirName"]
+margin_left = 680.0
+margin_right = 688.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="DefaultOpenDir" type="HBoxContainer" parent="VBoxContainer/OptionsTabs/General"]
+margin_top = 68.0
+margin_right = 688.0
+margin_bottom = 92.0
+alignment = 1
+
+[node name="C2" type="Control" parent="VBoxContainer/OptionsTabs/General/DefaultOpenDir"]
+margin_right = 8.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="Label" type="Label" parent="VBoxContainer/OptionsTabs/General/DefaultOpenDir"]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 155.0
+margin_bottom = 19.0
+text = "Default open directory"
+
+[node name="C" type="Control" parent="VBoxContainer/OptionsTabs/General/DefaultOpenDir"]
+margin_left = 159.0
+margin_right = 372.0
+margin_bottom = 24.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/OptionsTabs/General/DefaultOpenDir"]
+margin_left = 376.0
+margin_right = 676.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 300, 0 )
+placeholder_text = "C:/Users"
+
+[node name="C3" type="Control" parent="VBoxContainer/OptionsTabs/General/DefaultOpenDir"]
+margin_left = 680.0
+margin_right = 688.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="ThemeSelection" type="HBoxContainer" parent="VBoxContainer/OptionsTabs/General"]
+margin_top = 96.0
+margin_right = 688.0
+margin_bottom = 116.0
+alignment = 1
+
+[node name="C2" type="Control" parent="VBoxContainer/OptionsTabs/General/ThemeSelection"]
+margin_right = 8.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="Label" type="Label" parent="VBoxContainer/OptionsTabs/General/ThemeSelection"]
+margin_left = 12.0
+margin_top = 3.0
+margin_right = 148.0
+margin_bottom = 17.0
+text = "User interface theme"
+
+[node name="C" type="Control" parent="VBoxContainer/OptionsTabs/General/ThemeSelection"]
+margin_left = 152.0
+margin_right = 372.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/OptionsTabs/General/ThemeSelection"]
+margin_left = 376.0
+margin_right = 676.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 300, 0 )
+text = "Default Dark"
+items = [ "Default Dark", null, false, 0, null, "Godot Blue", null, false, 1, null ]
+selected = 0
+
+[node name="C3" type="Control" parent="VBoxContainer/OptionsTabs/General/ThemeSelection"]
+margin_left = 680.0
+margin_right = 688.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="Editor" type="VBoxContainer" parent="VBoxContainer/OptionsTabs"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="Control" type="Control" parent="VBoxContainer/OptionsTabs/Editor"]
+margin_right = 688.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 0, 8 )
+
+[node name="HighlightLine" type="HBoxContainer" parent="VBoxContainer/OptionsTabs/Editor"]
+margin_top = 12.0
+margin_right = 688.0
+margin_bottom = 52.0
+alignment = 1
+
+[node name="C" type="Control" parent="VBoxContainer/OptionsTabs/Editor/HighlightLine"]
+margin_right = 8.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="Label" type="Label" parent="VBoxContainer/OptionsTabs/Editor/HighlightLine"]
+margin_left = 12.0
+margin_top = 13.0
+margin_right = 147.0
+margin_bottom = 27.0
+text = "Highlight current line"
+
+[node name="C5" type="Control" parent="VBoxContainer/OptionsTabs/Editor/HighlightLine"]
+margin_left = 151.0
+margin_right = 596.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CheckBox" type="CheckButton" parent="VBoxContainer/OptionsTabs/Editor/HighlightLine"]
+margin_left = 600.0
+margin_right = 676.0
+margin_bottom = 40.0
+focus_mode = 0
+
+[node name="C2" type="Control" parent="VBoxContainer/OptionsTabs/Editor/HighlightLine"]
+margin_left = 680.0
+margin_right = 688.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="ShowLineNumbers" type="HBoxContainer" parent="VBoxContainer/OptionsTabs/Editor"]
+margin_top = 56.0
+margin_right = 688.0
+margin_bottom = 96.0
+alignment = 1
+
+[node name="C" type="Control" parent="VBoxContainer/OptionsTabs/Editor/ShowLineNumbers"]
+margin_right = 8.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="Label" type="Label" parent="VBoxContainer/OptionsTabs/Editor/ShowLineNumbers"]
+margin_left = 12.0
+margin_top = 13.0
+margin_right = 134.0
+margin_bottom = 27.0
+text = "Show line numbers"
+
+[node name="C5" type="Control" parent="VBoxContainer/OptionsTabs/Editor/ShowLineNumbers"]
+margin_left = 138.0
+margin_right = 596.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CheckBox" type="CheckButton" parent="VBoxContainer/OptionsTabs/Editor/ShowLineNumbers"]
+margin_left = 600.0
+margin_right = 676.0
+margin_bottom = 40.0
+focus_mode = 0
+
+[node name="C2" type="Control" parent="VBoxContainer/OptionsTabs/Editor/ShowLineNumbers"]
+margin_left = 680.0
+margin_right = 688.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="DrawTabs" type="HBoxContainer" parent="VBoxContainer/OptionsTabs/Editor"]
+margin_top = 100.0
+margin_right = 688.0
+margin_bottom = 140.0
+alignment = 1
+
+[node name="C" type="Control" parent="VBoxContainer/OptionsTabs/Editor/DrawTabs"]
+margin_right = 8.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="Label" type="Label" parent="VBoxContainer/OptionsTabs/Editor/DrawTabs"]
+margin_left = 12.0
+margin_top = 13.0
+margin_right = 75.0
+margin_bottom = 27.0
+text = "Draw tabs"
+
+[node name="C5" type="Control" parent="VBoxContainer/OptionsTabs/Editor/DrawTabs"]
+margin_left = 79.0
+margin_right = 596.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CheckBox" type="CheckButton" parent="VBoxContainer/OptionsTabs/Editor/DrawTabs"]
+margin_left = 600.0
+margin_right = 676.0
+margin_bottom = 40.0
+focus_mode = 0
+
+[node name="C2" type="Control" parent="VBoxContainer/OptionsTabs/Editor/DrawTabs"]
+margin_left = 680.0
+margin_right = 688.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="TabCloseDisplay" type="HBoxContainer" parent="VBoxContainer/OptionsTabs/Editor"]
+margin_top = 144.0
+margin_right = 688.0
+margin_bottom = 184.0
+alignment = 1
+
+[node name="C" type="Control" parent="VBoxContainer/OptionsTabs/Editor/TabCloseDisplay"]
+margin_right = 8.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="Label" type="Label" parent="VBoxContainer/OptionsTabs/Editor/TabCloseDisplay"]
+margin_left = 12.0
+margin_top = 13.0
+margin_right = 248.0
+margin_bottom = 27.0
+text = "Display close button on inactive tabs"
+
+[node name="C5" type="Control" parent="VBoxContainer/OptionsTabs/Editor/TabCloseDisplay"]
+margin_left = 252.0
+margin_right = 596.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CheckBox" type="CheckButton" parent="VBoxContainer/OptionsTabs/Editor/TabCloseDisplay"]
+margin_left = 600.0
+margin_right = 676.0
+margin_bottom = 40.0
+focus_mode = 0
+
+[node name="C2" type="Control" parent="VBoxContainer/OptionsTabs/Editor/TabCloseDisplay"]
+margin_left = 680.0
+margin_right = 688.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="Minimap" type="HBoxContainer" parent="VBoxContainer/OptionsTabs/Editor"]
+margin_top = 188.0
+margin_right = 688.0
+margin_bottom = 228.0
+alignment = 1
+
+[node name="C" type="Control" parent="VBoxContainer/OptionsTabs/Editor/Minimap"]
+margin_right = 8.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="Label" type="Label" parent="VBoxContainer/OptionsTabs/Editor/Minimap"]
+margin_left = 12.0
+margin_top = 13.0
+margin_right = 106.0
+margin_bottom = 27.0
+text = "Show minimap"
+
+[node name="C5" type="Control" parent="VBoxContainer/OptionsTabs/Editor/Minimap"]
+margin_left = 110.0
+margin_right = 596.0
+margin_bottom = 40.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CheckBox" type="CheckButton" parent="VBoxContainer/OptionsTabs/Editor/Minimap"]
+margin_left = 600.0
+margin_right = 676.0
+margin_bottom = 40.0
+focus_mode = 0
+
+[node name="C2" type="Control" parent="VBoxContainer/OptionsTabs/Editor/Minimap"]
+margin_left = 680.0
+margin_right = 688.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="TabAlign" type="HBoxContainer" parent="VBoxContainer/OptionsTabs/Editor"]
+margin_top = 232.0
+margin_right = 688.0
+margin_bottom = 252.0
+alignment = 1
+
+[node name="C" type="Control" parent="VBoxContainer/OptionsTabs/Editor/TabAlign"]
+margin_right = 8.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="Label" type="Label" parent="VBoxContainer/OptionsTabs/Editor/TabAlign"]
+margin_left = 12.0
+margin_top = 3.0
+margin_right = 68.0
+margin_bottom = 17.0
+text = "Tab align"
+
+[node name="C5" type="Control" parent="VBoxContainer/OptionsTabs/Editor/TabAlign"]
+margin_left = 72.0
+margin_right = 472.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CheckBox" type="OptionButton" parent="VBoxContainer/OptionsTabs/Editor/TabAlign"]
+margin_left = 476.0
+margin_right = 676.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 200, 0 )
+focus_mode = 0
+text = "Left align"
+items = [ "Left align", null, false, 0, null, "Center align", null, false, 1, null, "Right align (bugged)", null, false, 2, null ]
+selected = 0
+
+[node name="C2" type="Control" parent="VBoxContainer/OptionsTabs/Editor/TabAlign"]
+margin_left = 680.0
+margin_right = 688.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 8, 0 )
+
+[node name="C3" type="Control" parent="VBoxContainer"]
+margin_top = 665.0
+margin_right = 696.0
+margin_bottom = 682.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 686.0
+margin_right = 696.0
+margin_bottom = 706.0
+alignment = 1
+
+[node name="C" type="Control" parent="VBoxContainer/HBoxContainer"]
+margin_right = 195.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ButtonSave" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 199.0
+margin_right = 240.0
+margin_bottom = 20.0
+text = "Save"
+
+[node name="C2" type="Control" parent="VBoxContainer/HBoxContainer"]
+margin_left = 244.0
+margin_right = 439.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ButtonCancel" type="Button" parent="VBoxContainer/HBoxContainer"]
+margin_left = 443.0
+margin_right = 497.0
+margin_bottom = 20.0
+text = "Cancel"
+
+[node name="C3" type="Control" parent="VBoxContainer/HBoxContainer"]
+margin_left = 501.0
+margin_right = 696.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="C4" type="Control" parent="VBoxContainer"]
+margin_top = 710.0
+margin_right = 696.0
+margin_bottom = 728.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ERROR" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -700.0
+margin_top = -732.0
+margin_right = -4.0
+margin_bottom = -4.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 0.627451 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/ButtonSave" to="." method="_on_ButtonSave_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/ButtonCancel" to="." method="_on_ButtonCancel_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
