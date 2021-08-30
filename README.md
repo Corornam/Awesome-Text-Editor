@@ -1,2 +1,2 @@
-# Awesome-Text-Editor
+# Awesome Text Editor
  Here just to see how things work.
