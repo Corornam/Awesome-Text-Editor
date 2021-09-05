@@ -6,16 +6,16 @@
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
 
-[node name="PreferencesMenu" type="PopupPanel"]
-visible = true
+[node name="PreferencesMenu" type="WindowDialog"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -352.0
-margin_top = -368.0
-margin_right = 352.0
-margin_bottom = 368.0
+margin_left = -308.0
+margin_top = -222.0
+margin_right = 308.0
+margin_bottom = 222.0
+window_title = "Preferences"
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -24,50 +24,26 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 4.0
-margin_right = -4.0
-margin_bottom = -4.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="C" type="Control" parent="VBoxContainer"]
-margin_right = 696.0
-margin_bottom = 17.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Title" type="Label" parent="VBoxContainer"]
-margin_top = 21.0
-margin_right = 696.0
-margin_bottom = 35.0
-text = "Preferences"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="C2" type="Control" parent="VBoxContainer"]
-margin_top = 39.0
-margin_right = 696.0
-margin_bottom = 57.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
 
 [node name="OptionsTabs" type="TabContainer" parent="VBoxContainer"]
-margin_top = 61.0
-margin_right = 696.0
-margin_bottom = 661.0
-rect_min_size = Vector2( 0, 600 )
+margin_right = 596.0
+margin_bottom = 388.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 tab_align = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="General" type="VBoxContainer" parent="VBoxContainer/OptionsTabs"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -76,13 +52,13 @@ margin_right = -4.0
 margin_bottom = -4.0
 
 [node name="C" type="Control" parent="VBoxContainer/OptionsTabs/General"]
-margin_right = 688.0
+margin_right = 588.0
 margin_bottom = 8.0
 rect_min_size = Vector2( 0, 8 )
 
 [node name="DefaultProjectName" type="HBoxContainer" parent="VBoxContainer/OptionsTabs/General"]
 margin_top = 12.0
-margin_right = 688.0
+margin_right = 588.0
 margin_bottom = 36.0
 alignment = 1
 
@@ -100,26 +76,28 @@ text = "Default project name"
 
 [node name="C" type="Control" parent="VBoxContainer/OptionsTabs/General/DefaultProjectName"]
 margin_left = 151.0
-margin_right = 372.0
+margin_right = 272.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="LineEdit" type="LineEdit" parent="VBoxContainer/OptionsTabs/General/DefaultProjectName"]
-margin_left = 376.0
-margin_right = 676.0
+margin_left = 276.0
+margin_right = 576.0
 margin_bottom = 24.0
 rect_min_size = Vector2( 300, 0 )
+caret_blink = true
+caret_blink_speed = 0.5
 
 [node name="C3" type="Control" parent="VBoxContainer/OptionsTabs/General/DefaultProjectName"]
-margin_left = 680.0
-margin_right = 688.0
+margin_left = 580.0
+margin_right = 588.0
 margin_bottom = 24.0
 rect_min_size = Vector2( 8, 0 )
 
 [node name="DefaultNewDirName" type="HBoxContainer" parent="VBoxContainer/OptionsTabs/General"]
 margin_top = 40.0
-margin_right = 688.0
+margin_right = 588.0
 margin_bottom = 64.0
 alignment = 1
 
@@ -137,26 +115,28 @@ text = "Default new directory name"
 
 [node name="C" type="Control" parent="VBoxContainer/OptionsTabs/General/DefaultNewDirName"]
 margin_left = 193.0
-margin_right = 372.0
+margin_right = 272.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="LineEdit" type="LineEdit" parent="VBoxContainer/OptionsTabs/General/DefaultNewDirName"]
-margin_left = 376.0
-margin_right = 676.0
+margin_left = 276.0
+margin_right = 576.0
 margin_bottom = 24.0
 rect_min_size = Vector2( 300, 0 )
+caret_blink = true
+caret_blink_speed = 0.5
 
 [node name="C3" type="Control" parent="VBoxContainer/OptionsTabs/General/DefaultNewDirName"]
-margin_left = 680.0
-margin_right = 688.0
+margin_left = 580.0
+margin_right = 588.0
 margin_bottom = 24.0
 rect_min_size = Vector2( 8, 0 )
 
 [node name="DefaultOpenDir" type="HBoxContainer" parent="VBoxContainer/OptionsTabs/General"]
 margin_top = 68.0
-margin_right = 688.0
+margin_right = 588.0
 margin_bottom = 92.0
 alignment = 1
 
@@ -174,27 +154,29 @@ text = "Default open directory"
 
 [node name="C" type="Control" parent="VBoxContainer/OptionsTabs/General/DefaultOpenDir"]
 margin_left = 159.0
-margin_right = 372.0
+margin_right = 272.0
 margin_bottom = 24.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="LineEdit" type="LineEdit" parent="VBoxContainer/OptionsTabs/General/DefaultOpenDir"]
-margin_left = 376.0
-margin_right = 676.0
+margin_left = 276.0
+margin_right = 576.0
 margin_bottom = 24.0
 rect_min_size = Vector2( 300, 0 )
 placeholder_text = "C:/Users"
+caret_blink = true
+caret_blink_speed = 0.5
 
 [node name="C3" type="Control" parent="VBoxContainer/OptionsTabs/General/DefaultOpenDir"]
-margin_left = 680.0
-margin_right = 688.0
+margin_left = 580.0
+margin_right = 588.0
 margin_bottom = 24.0
 rect_min_size = Vector2( 8, 0 )
 
 [node name="ThemeSelection" type="HBoxContainer" parent="VBoxContainer/OptionsTabs/General"]
 margin_top = 96.0
-margin_right = 688.0
+margin_right = 588.0
 margin_bottom = 116.0
 alignment = 1
 
@@ -212,14 +194,14 @@ text = "User interface theme"
 
 [node name="C" type="Control" parent="VBoxContainer/OptionsTabs/General/ThemeSelection"]
 margin_left = 152.0
-margin_right = 372.0
+margin_right = 272.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="OptionButton" type="OptionButton" parent="VBoxContainer/OptionsTabs/General/ThemeSelection"]
-margin_left = 376.0
-margin_right = 676.0
+margin_left = 276.0
+margin_right = 576.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 300, 0 )
 text = "Default Dark"
@@ -227,12 +209,13 @@ items = [ "Default Dark", null, false, 0, null, "Godot Blue", null, false, 1, nu
 selected = 0
 
 [node name="C3" type="Control" parent="VBoxContainer/OptionsTabs/General/ThemeSelection"]
-margin_left = 680.0
-margin_right = 688.0
+margin_left = 580.0
+margin_right = 588.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 8, 0 )
 
 [node name="Editor" type="VBoxContainer" parent="VBoxContainer/OptionsTabs"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
@@ -471,67 +454,53 @@ margin_right = 688.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 8, 0 )
 
-[node name="C3" type="Control" parent="VBoxContainer"]
-margin_top = 665.0
-margin_right = 696.0
-margin_bottom = 682.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+[node name="C" type="Control" parent="VBoxContainer"]
+margin_top = 392.0
+margin_right = 596.0
+margin_bottom = 400.0
+rect_min_size = Vector2( 0, 8 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-margin_top = 686.0
-margin_right = 696.0
-margin_bottom = 706.0
+margin_top = 404.0
+margin_right = 596.0
+margin_bottom = 424.0
 alignment = 1
 
 [node name="C" type="Control" parent="VBoxContainer/HBoxContainer"]
-margin_right = 195.0
+margin_right = 161.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="ButtonSave" type="Button" parent="VBoxContainer/HBoxContainer"]
-margin_left = 199.0
-margin_right = 240.0
+margin_left = 165.0
+margin_right = 206.0
 margin_bottom = 20.0
 text = "Save"
 
 [node name="C2" type="Control" parent="VBoxContainer/HBoxContainer"]
-margin_left = 244.0
-margin_right = 439.0
+margin_left = 210.0
+margin_right = 372.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
 [node name="ButtonCancel" type="Button" parent="VBoxContainer/HBoxContainer"]
-margin_left = 443.0
-margin_right = 497.0
+margin_left = 376.0
+margin_right = 430.0
 margin_bottom = 20.0
 text = "Cancel"
 
 [node name="C3" type="Control" parent="VBoxContainer/HBoxContainer"]
-margin_left = 501.0
-margin_right = 696.0
+margin_left = 434.0
+margin_right = 596.0
 margin_bottom = 20.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="C4" type="Control" parent="VBoxContainer"]
-margin_top = 710.0
-margin_right = 696.0
-margin_bottom = 728.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
 [node name="ERROR" type="Label" parent="."]
-anchor_left = 1.0
-anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -700.0
-margin_top = -732.0
-margin_right = -4.0
-margin_bottom = -4.0
 grow_horizontal = 0
 grow_vertical = 0
 custom_fonts/font = SubResource( 1 )

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Scripts/FileSystem.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/_FileSystem.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Icons/ArrowUp_x64.png" type="Texture" id=2]
 [ext_resource path="res://Resources/Fonts/Inconsolata-Regular.ttf" type="DynamicFontData" id=3]
 

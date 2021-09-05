@@ -4,11 +4,6 @@ extends Node
 # https://godotengine.org/qa/46747/connecting-signal-from-another-scene
 # It is automaticaly loaded in Project -> Project Settings -> Auto Load.
 
-# All needed icons are loaded here. On startup.
-# Icon resource: https://github.com/godotengine/godot/tree/master/editor/icons
-onready var ico_file : Texture = load("res://Resources/Icons/File.svg")
-onready var ico_folder : Texture = load("res://Resources/Icons/Folder.svg")
-
 # Dictionary, where all the preferences are packed in (see pack_preferences()).
 var preferences = {}
 var preferences_save_path : String = "user://Preferences.dat"

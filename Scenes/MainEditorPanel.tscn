@@ -15,9 +15,7 @@ __meta__ = {
 [node name="PanelContainer" type="PanelContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 0.140312
-margin_top = 37.0
-margin_right = 0.140015
+margin_top = 38.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 __meta__ = {
@@ -25,16 +23,16 @@ __meta__ = {
 }
 
 [node name="TabContainer" type="HBoxContainer" parent="."]
-anchor_left = 0.00104167
 anchor_right = 1.0
-anchor_bottom = 0.0342593
+margin_bottom = 24.0
+rect_min_size = Vector2( 0, 38 )
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }
 
 [node name="Tabs" type="Tabs" parent="TabContainer"]
-margin_right = 1918.0
-margin_bottom = 37.0
+margin_right = 1920.0
+margin_bottom = 38.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 tab_align = 0
@@ -44,97 +42,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TextPopup" type="PopupPanel" parent="."]
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -100.5
-margin_top = -57.5
-margin_right = 100.5
-margin_bottom = 57.5
-
-[node name="VBoxContainer" type="VBoxContainer" parent="TextPopup"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_left = 4.0
-margin_top = 4.0
-margin_right = -4.0
-margin_bottom = -4.0
-alignment = 1
+margin_left = -100.0
+margin_top = -37.5
+margin_right = 100.0
+margin_bottom = 37.5
+dialog_text = "File(s) are not saved.
+Close anyway?"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Control3" type="Control" parent="TextPopup/VBoxContainer"]
-margin_right = 193.0
-margin_bottom = 13.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Title" type="Label" parent="TextPopup/VBoxContainer"]
-margin_top = 17.0
-margin_right = 193.0
-margin_bottom = 48.0
-text = "File(s) not saved!
-Continue anyway?"
-align = 1
-valign = 1
-
-[node name="Control2" type="Control" parent="TextPopup/VBoxContainer"]
-margin_top = 52.0
-margin_right = 193.0
-margin_bottom = 65.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="HBoxContainer" type="HBoxContainer" parent="TextPopup/VBoxContainer"]
-margin_top = 69.0
-margin_right = 193.0
-margin_bottom = 89.0
-alignment = 1
-
-[node name="Control4" type="Control" parent="TextPopup/VBoxContainer/HBoxContainer"]
-margin_right = 29.0
-margin_bottom = 20.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="ButtonYes" type="Button" parent="TextPopup/VBoxContainer/HBoxContainer"]
-margin_left = 33.0
-margin_right = 67.0
-margin_bottom = 20.0
-text = "Yes"
-
-[node name="Control5" type="Control" parent="TextPopup/VBoxContainer/HBoxContainer"]
-margin_left = 71.0
-margin_right = 101.0
-margin_bottom = 20.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="ButtonCancel" type="Button" parent="TextPopup/VBoxContainer/HBoxContainer"]
-margin_left = 105.0
-margin_right = 159.0
-margin_bottom = 20.0
-text = "Cancel"
-
-[node name="Control6" type="Control" parent="TextPopup/VBoxContainer/HBoxContainer"]
-margin_left = 163.0
-margin_right = 193.0
-margin_bottom = 20.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Control" type="Control" parent="TextPopup/VBoxContainer"]
-margin_top = 93.0
-margin_right = 193.0
-margin_bottom = 107.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
 [connection signal="gui_input" from="TabContainer/Tabs" to="." method="_on_Tabs_gui_input"]
 [connection signal="tab_clicked" from="TabContainer/Tabs" to="." method="_on_Tabs_tab_clicked"]
 [connection signal="tab_close" from="TabContainer/Tabs" to="." method="_on_Tabs_tab_close"]
-[connection signal="pressed" from="TextPopup/VBoxContainer/HBoxContainer/ButtonYes" to="." method="_on_ButtonYes_pressed"]
-[connection signal="pressed" from="TextPopup/VBoxContainer/HBoxContainer/ButtonCancel" to="." method="_on_ButtonCancel_pressed"]
+[connection signal="confirmed" from="ConfirmationDialog" to="." method="_on_ConfirmationDialog_confirmed"]

@@ -1,6 +1,7 @@
 extends Control
 
 
+onready var text : Node = $TextEdit
 onready var is_saved : bool = true
 onready var save_path : String = ""
 onready var file_name : String = ""
@@ -9,6 +10,7 @@ var array_pos : int
 
 
 func _on_Timer_timeout():
+	# Places '(*)' if file is not saved.
 	var win_array : Array = main.tab_windows_array
 	array_pos =  win_array.find(self, 0)
 	if is_saved == false:
@@ -27,9 +29,5 @@ func _on_TextEdit_text_changed():
 
 func _enter_tree():
 	print("[TabWindow] New tab window entered tree")
-
-
-func _ready():
-	$TextEdit.highlight_current_line = Global.highlight_line
 
 

@@ -1,4 +1,4 @@
-extends PopupPanel
+extends WindowDialog
 
 
 onready var DefaultProjectName : Node = $VBoxContainer/OptionsTabs/General/DefaultProjectName/LineEdit

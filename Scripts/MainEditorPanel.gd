@@ -4,15 +4,14 @@ extends Control
 
 
 onready var tabs : Node = $TabContainer/Tabs
-onready var TextPopup : Node = $TextPopup
-onready var TextPopupTitle : Node = $TextPopup/VBoxContainer/Title
+onready var Confirmtion : Node = $ConfirmationDialog
 onready var tab_windows_array : Array
 
 signal open_Preferences()
 signal open_RenameDialogBox(title, placeholder)
 signal open_R_TabMenu_box()
-signal open_FileSystem_save(title, file_name)
-signal open_FileSystem_load(title)
+signal open_FileSystem_save(file_name)
+signal open_FileSystem_load()
 signal save_file_on_path(tab, path)
 
 
@@ -47,19 +46,14 @@ func _on_RenameDialogBox_set_project_name(new_name):
 	tabs.set_tab_title(tabs.current_tab, new_name)
 
 
-func _on_FileSystem_return_loaded_file(loaded_text, project_name, path):
+func _on_FileSystem_return_loaded_file(text, project_name, path):
 	new_tab(project_name)
 	tab_windows_array[tabs.current_tab].is_saved = true
 	tab_windows_array[tabs.current_tab].save_path = path
-	tab_windows_array[tabs.current_tab].get_child(1).text = loaded_text
+	tab_windows_array[tabs.current_tab].get_child(1).text = text
 
 
-func _on_ButtonCancel_pressed():
-	TextPopup.hide()
-
-
-func _on_ButtonYes_pressed():
-	TextPopup.hide()
+func _on_ConfirmationDialog_confirmed():
 	# Sets active tab to saved, so it can be closed.
 	var tab = tabs.current_tab
 	tab_windows_array[tab].is_saved = true
@@ -85,14 +79,14 @@ func _on_Project_item_pressed(ID):
 		
 		2:
 			print("[MainEditorPanel] 'Load' selected")
-			emit_signal("open_FileSystem_load", "Load File")
+			emit_signal("open_FileSystem_load")
 		
 		4:
 			print("[MainEditorPanel] 'Save' selected")
 			var path = tab_windows_array[tabs.current_tab].save_path
 			if path == "":
 				print("[MainEditorPanel] Selected project has not yet been saved")
-				emit_signal("open_FileSystem_save", "Save As...",
+				emit_signal("open_FileSystem_save",
 					tabs.get_tab_title(tabs.current_tab))
 			else:
 				print("[MainEditorPanel] Selected project has a save path")
@@ -100,7 +94,7 @@ func _on_Project_item_pressed(ID):
 		
 		5:
 			print("[MainEditorPanel] 'Save As...' selected")
-			emit_signal("open_FileSystem_save", "Save As...",
+			emit_signal("open_FileSystem_save",
 				tabs.get_tab_title(tabs.current_tab))
 		
 		7:
@@ -145,7 +139,7 @@ func new_tab(tab_name : String) -> void:
 func close_tab(tab : int) -> void:
 	
 	if tab_windows_array[tab].is_saved == false:
-		TextPopup.popup()
+		Confirmtion.popup()
 	else:
 		
 		# Can close only if more tabs tahn one.
@@ -203,6 +197,7 @@ func _ready():
 		new_tab(Global.default_project_name)
 	#This runs onnly in the editor. For easier editing. 
 	if Engine.editor_hint:
-		tabs.add_tab("test")
+		tabs.add_tab("test tab")
+
 
 

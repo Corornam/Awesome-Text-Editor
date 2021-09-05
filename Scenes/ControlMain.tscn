@@ -1,13 +1,14 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scenes/PreferencesMenu.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/AboutPopup.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/ProjectMenuButton.gd" type="Script" id=3]
 [ext_resource path="res://Scenes/MainEditorPanel.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/RenameDialogBox.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/R_TabMenu.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/FileSystem.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/AboutWindow.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scripts/ToolsMenuButton.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/FileSystem.gd" type="Script" id=9]
+[ext_resource path="res://Scripts/AboutWindow.gd" type="Script" id=10]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -26,67 +27,60 @@ __meta__ = {
 [node name="HSplitContainer" type="HSplitContainer" parent="Panel"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 8.0
-margin_top = 64.0
-margin_right = -8.0
-margin_bottom = -16.0
-split_offset = 40
+margin_left = 10.0
+margin_top = 55.0
+margin_right = -10.0
+margin_bottom = -10.0
+split_offset = 400
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PanelContainer" type="PanelContainer" parent="Panel/HSplitContainer"]
-visible = false
-margin_right = 54.0
-margin_bottom = 1000.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_right = 700.0
+margin_bottom = 1015.0
+rect_min_size = Vector2( 300, 300 )
 
 [node name="PanelContainer2" type="Control" parent="Panel/HSplitContainer"]
-margin_right = 1904.0
-margin_bottom = 1000.0
+margin_left = 712.0
+margin_right = 1900.0
+margin_bottom = 1015.0
+rect_min_size = Vector2( 300, 300 )
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="MainEditorPanel" parent="Panel/HSplitContainer/PanelContainer2" instance=ExtResource( 4 )]
+[node name="Editor" parent="Panel/HSplitContainer/PanelContainer2" instance=ExtResource( 4 )]
 rect_clip_content = false
 
 [node name="ToolBar" type="HBoxContainer" parent="Panel"]
 anchor_right = 1.0
-anchor_bottom = 0.0518519
-margin_bottom = 3.8147e-06
+margin_left = 10.0
+rect_min_size = Vector2( 0, 60 )
 __meta__ = {
-"_edit_use_anchors_": true
+"_edit_use_anchors_": false
 }
 
-[node name="C" type="Control" parent="Panel/ToolBar"]
-margin_right = 8.0
-margin_bottom = 56.0
-rect_min_size = Vector2( 8, 0 )
-
 [node name="Project" type="MenuButton" parent="Panel/ToolBar"]
-margin_left = 12.0
-margin_right = 69.0
-margin_bottom = 56.0
+margin_right = 57.0
+margin_bottom = 60.0
 text = "Project"
 items = [ "New Project", null, 0, false, false, 0, 0, null, "", false, "", null, 0, false, false, 1, 0, null, "", true, "Load", null, 0, false, false, 2, 0, null, "", false, "", null, 0, false, false, 3, 0, null, "", true, "Save", null, 0, false, false, 4, 0, null, "", false, "Save As", null, 0, false, false, 5, 0, null, "", false, "", null, 0, false, false, 6, 0, null, "", true, "Close Project", null, 0, false, false, 7, 0, null, "", false, "Quit", null, 0, false, false, 8, 0, null, "", false ]
 switch_on_hover = true
 script = ExtResource( 3 )
 
 [node name="Tools" type="MenuButton" parent="Panel/ToolBar"]
-margin_left = 73.0
-margin_right = 119.0
-margin_bottom = 56.0
+margin_left = 61.0
+margin_right = 107.0
+margin_bottom = 60.0
 text = "Tools"
 items = [ "Rename Project", null, 0, false, false, 0, 0, null, "", false, "", null, 0, false, false, 1, 0, null, "", true, "Preferences", null, 0, false, false, 2, 0, null, "", false ]
 switch_on_hover = true
 script = ExtResource( 8 )
 
 [node name="About" type="Button" parent="Panel/ToolBar"]
-margin_left = 123.0
-margin_right = 173.0
-margin_bottom = 56.0
+margin_left = 111.0
+margin_right = 161.0
+margin_bottom = 60.0
 focus_mode = 0
 text = "About"
 flat = true
@@ -96,23 +90,37 @@ flat = true
 [node name="R_TabMenu" parent="Panel" instance=ExtResource( 6 )]
 items = [ "Save", null, 0, false, false, 0, 0, null, "", false, "Rename", null, 0, false, false, 1, 0, null, "", false, "Close", null, 0, false, false, 2, 0, null, "", false ]
 
-[node name="FileSystem" parent="Panel" instance=ExtResource( 7 )]
-
 [node name="PreferencesMenu" parent="Panel" instance=ExtResource( 1 )]
 process_priority = -1
-visible = false
 
-[node name="AboutPopup" parent="Panel" instance=ExtResource( 2 )]
+[node name="FileSystem" type="FileDialog" parent="Panel"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -357.0
+margin_top = -299.0
+margin_right = 357.0
+margin_bottom = 299.0
+rect_min_size = Vector2( 500, 500 )
+resizable = true
+access = 2
+show_hidden_files = true
+current_dir = "/Users/Stefan/Documents/Godot Projects/Awesome Text Editor"
+current_path = "/Users/Stefan/Documents/Godot Projects/Awesome Text Editor/"
+script = ExtResource( 9 )
 
-[connection signal="open_FileSystem_load" from="Panel/HSplitContainer/PanelContainer2/MainEditorPanel" to="Panel/FileSystem" method="_on_MainEditorPanel_open_FileSystem_load"]
-[connection signal="open_FileSystem_save" from="Panel/HSplitContainer/PanelContainer2/MainEditorPanel" to="Panel/FileSystem" method="_on_MainEditorPanel_open_FileSystem_save"]
-[connection signal="open_Preferences" from="Panel/HSplitContainer/PanelContainer2/MainEditorPanel" to="Panel/PreferencesMenu" method="_on_MainEditorPanel_open_Preferences"]
-[connection signal="open_R_TabMenu_box" from="Panel/HSplitContainer/PanelContainer2/MainEditorPanel" to="Panel/R_TabMenu" method="_on_MainEditorPanel_open_R_TabMenu_box"]
-[connection signal="open_RenameDialogBox" from="Panel/HSplitContainer/PanelContainer2/MainEditorPanel" to="Panel/RenameDialogBox" method="_on_MainEditorPanel_open_RenameDialogBox"]
-[connection signal="save_file_on_path" from="Panel/HSplitContainer/PanelContainer2/MainEditorPanel" to="Panel/FileSystem" method="_on_MainEditorPanel_save_file_on_path"]
-[connection signal="pressed" from="Panel/ToolBar/About" to="Panel/AboutPopup" method="_on_About_pressed"]
-[connection signal="set_dir_name" from="Panel/RenameDialogBox" to="Panel/FileSystem" method="_on_RenameDialogBox_set_dir_name"]
-[connection signal="set_project_name" from="Panel/RenameDialogBox" to="Panel/HSplitContainer/PanelContainer2/MainEditorPanel" method="_on_RenameDialogBox_set_project_name"]
-[connection signal="open_RenameDialogBox" from="Panel/FileSystem" to="Panel/RenameDialogBox" method="_on_FileSystem_open_RenameDialogBox"]
-[connection signal="return_loaded_file" from="Panel/FileSystem" to="Panel/HSplitContainer/PanelContainer2/MainEditorPanel" method="_on_FileSystem_return_loaded_file"]
-[connection signal="set_preferences" from="Panel/PreferencesMenu" to="Panel/HSplitContainer/PanelContainer2/MainEditorPanel" method="_on_PreferencesMenu_set_preferences"]
+[node name="AboutWindow" parent="Panel" instance=ExtResource( 7 )]
+script = ExtResource( 10 )
+
+[connection signal="open_FileSystem_load" from="Panel/HSplitContainer/PanelContainer2/Editor" to="Panel/FileSystem" method="_on_Editor_open_FileSystem_load"]
+[connection signal="open_FileSystem_save" from="Panel/HSplitContainer/PanelContainer2/Editor" to="Panel/FileSystem" method="_on_Editor_open_FileSystem_save"]
+[connection signal="open_Preferences" from="Panel/HSplitContainer/PanelContainer2/Editor" to="Panel/PreferencesMenu" method="_on_MainEditorPanel_open_Preferences"]
+[connection signal="open_R_TabMenu_box" from="Panel/HSplitContainer/PanelContainer2/Editor" to="Panel/R_TabMenu" method="_on_MainEditorPanel_open_R_TabMenu_box"]
+[connection signal="open_RenameDialogBox" from="Panel/HSplitContainer/PanelContainer2/Editor" to="Panel/RenameDialogBox" method="_on_MainEditorPanel_open_RenameDialogBox"]
+[connection signal="save_file_on_path" from="Panel/HSplitContainer/PanelContainer2/Editor" to="Panel/FileSystem" method="_on_Editor_save_file_on_path"]
+[connection signal="pressed" from="Panel/ToolBar/About" to="Panel/AboutWindow" method="_on_About_pressed"]
+[connection signal="set_project_name" from="Panel/RenameDialogBox" to="Panel/HSplitContainer/PanelContainer2/Editor" method="_on_RenameDialogBox_set_project_name"]
+[connection signal="set_preferences" from="Panel/PreferencesMenu" to="Panel/HSplitContainer/PanelContainer2/Editor" method="_on_PreferencesMenu_set_preferences"]
+[connection signal="file_selected" from="Panel/FileSystem" to="Panel/FileSystem" method="_on_FileSystem_file_selected"]
+[connection signal="return_loaded_file" from="Panel/FileSystem" to="Panel/HSplitContainer/PanelContainer2/Editor" method="_on_FileSystem_return_loaded_file"]
