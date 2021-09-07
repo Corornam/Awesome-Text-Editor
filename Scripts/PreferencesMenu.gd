@@ -92,7 +92,7 @@ func _on_set_preferences():
 	match Global.theme:
 		0:
 			print("[PreferencesMenu] 'Default Dark' theme set")
-			node.theme = null
+			node.set_theme(load("res://Resources/Themes/DefaultDark.tres"))
 		1:
 			print("[PreferencesMenu] 'Godot Blue' theme set")
 			node.set_theme(load("res://Resources/Themes/GodotBlue.tres"))
