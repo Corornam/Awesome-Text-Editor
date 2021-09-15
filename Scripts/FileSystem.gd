@@ -1,3 +1,10 @@
+#----------------------------------------------------------------------------------------
+# Awesome Text Editor
+# https://github.com/grabaraba/Awesome-Text-Editor
+# Under Apache-2.0 License
+#----------------------------------------------------------------------------------------
+
+
 # Source: https://godotengine.org/qa/16555/how-to-create-a-file-in-godot
 # Another source:
 # https://www.davidepesce.com/2019/11/04/essential-guide-to-godot-filesystem-api/

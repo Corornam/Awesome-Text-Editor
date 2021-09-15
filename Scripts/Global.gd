@@ -1,4 +1,12 @@
+#----------------------------------------------------------------------------------------
+# Awesome Text Editor
+# https://github.com/grabaraba/Awesome-Text-Editor
+# Under Apache-2.0 License
+#----------------------------------------------------------------------------------------
+
+
 extends Node
+
 
 # Basisi for this script: 
 # https://godotengine.org/qa/46747/connecting-signal-from-another-scene

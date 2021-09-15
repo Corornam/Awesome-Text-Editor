@@ -1,3 +1,10 @@
+#----------------------------------------------------------------------------------------
+# Awesome Text Editor
+# https://github.com/grabaraba/Awesome-Text-Editor
+# Under Apache-2.0 License
+#----------------------------------------------------------------------------------------
+
+
 # For more about this 'tool', se '_ready()'.
 tool
 extends Control

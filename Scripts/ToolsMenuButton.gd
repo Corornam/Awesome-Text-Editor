@@ -1,3 +1,10 @@
+#----------------------------------------------------------------------------------------
+# Awesome Text Editor
+# https://github.com/grabaraba/Awesome-Text-Editor
+# Under Apache-2.0 License
+#----------------------------------------------------------------------------------------
+
+
 extends MenuButton
 # Source: https://godotengine.org/qa/15934/how-to-use-popupmenu-from-menubutton
 

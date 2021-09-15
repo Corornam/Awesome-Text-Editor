@@ -1,3 +1,10 @@
+#----------------------------------------------------------------------------------------
+# Awesome Text Editor
+# https://github.com/grabaraba/Awesome-Text-Editor
+# Under Apache-2.0 License
+#----------------------------------------------------------------------------------------
+
+
 extends PopupPanel
 # Source:
 # https://docs.godotengine.org/en/stable/classes/class_directory.html?highlight=Directory
