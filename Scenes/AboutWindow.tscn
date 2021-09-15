@@ -18,4 +18,5 @@ margin_left = 10.0
 margin_top = 10.0
 margin_right = -10.0
 margin_bottom = -10.0
-text = "Do what you will with this software. It was primaraly made for myself, to see what i can do with Godot. Use at your own risk."
+text = "Do what you will with this software. It was made for my own enjoiment, to see what i can do with Godot. Use at your own risk.
+Made by: Štefan Bajt"
