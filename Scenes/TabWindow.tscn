@@ -16,8 +16,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-color_comment = Color( 0.403922, 0.411765, 0.431373, 0.815686 )
-color_N00 = Color( 0.282353, 0.509804, 0.772549, 1 )
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
@@ -43,4 +41,5 @@ __meta__ = {
 }
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="gui_input" from="TextEdit" to="." method="_on_TextEdit_gui_input"]
 [connection signal="text_changed" from="TextEdit" to="." method="_on_TextEdit_text_changed"]

@@ -4,7 +4,7 @@
 [ext_resource path="res://Resources/Themes/DefaultDark_TabFg.tres" type="StyleBox" id=2]
 [ext_resource path="res://Resources/Themes/DefaultDark_TabBg.tres" type="StyleBox" id=3]
 
-[sub_resource type="StyleBoxFlat" id=591]
+[sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 4.0
 content_margin_right = 4.0
 content_margin_top = 4.0
@@ -24,7 +24,7 @@ shadow_color = Color( 0.0862745, 0.0823529, 0.0823529, 0.607843 )
 shadow_size = 1
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id=592]
+[sub_resource type="StyleBoxFlat" id=2]
 content_margin_left = 4.0
 content_margin_right = 4.0
 content_margin_top = 4.0
@@ -44,36 +44,36 @@ shadow_color = Color( 0.0862745, 0.0823529, 0.0823529, 0.607843 )
 shadow_size = 1
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id=600]
+[sub_resource type="StyleBoxFlat" id=3]
 draw_center = false
 
-[sub_resource type="StyleBoxFlat" id=601]
+[sub_resource type="StyleBoxFlat" id=4]
 draw_center = false
 
-[sub_resource type="StyleBoxFlat" id=602]
+[sub_resource type="StyleBoxFlat" id=5]
 draw_center = false
 
-[sub_resource type="StyleBoxFlat" id=603]
+[sub_resource type="StyleBoxFlat" id=6]
 draw_center = false
 
-[sub_resource type="StyleBoxFlat" id=604]
+[sub_resource type="StyleBoxFlat" id=7]
 draw_center = false
 
-[sub_resource type="StyleBoxFlat" id=605]
+[sub_resource type="StyleBoxFlat" id=8]
 draw_center = false
 
-[sub_resource type="StyleBoxFlat" id=606]
+[sub_resource type="StyleBoxFlat" id=9]
 draw_center = false
 
-[sub_resource type="StyleBoxFlat" id=607]
+[sub_resource type="StyleBoxFlat" id=10]
 draw_center = false
 
-[sub_resource type="StyleBoxFlat" id=593]
+[sub_resource type="StyleBoxFlat" id=11]
 bg_color = Color( 0.145098, 0.145098, 0.164706, 1 )
 corner_detail = 1
 anti_aliasing = false
 
-[sub_resource type="StyleBoxFlat" id=594]
+[sub_resource type="StyleBoxFlat" id=12]
 bg_color = Color( 0.631373, 0.631373, 0.631373, 0.521569 )
 corner_radius_top_left = 1
 corner_radius_top_right = 1
@@ -81,7 +81,7 @@ corner_radius_bottom_right = 1
 corner_radius_bottom_left = 1
 corner_detail = 4
 
-[sub_resource type="StyleBoxFlat" id=595]
+[sub_resource type="StyleBoxFlat" id=13]
 content_margin_left = 8.0
 content_margin_right = 8.0
 content_margin_top = 8.0
@@ -98,10 +98,10 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
-[sub_resource type="StyleBoxLine" id=596]
+[sub_resource type="StyleBoxLine" id=14]
 color = Color( 0.831373, 0.831373, 0.831373, 1 )
 
-[sub_resource type="StyleBoxFlat" id=597]
+[sub_resource type="StyleBoxFlat" id=15]
 content_margin_left = 4.0
 content_margin_right = 4.0
 content_margin_top = 4.0
@@ -118,11 +118,11 @@ corner_radius_top_right = 2
 corner_radius_bottom_right = 2
 corner_radius_bottom_left = 2
 
-[sub_resource type="StyleBoxFlat" id=608]
+[sub_resource type="StyleBoxFlat" id=16]
 content_margin_left = 10.0
 content_margin_right = 10.0
-content_margin_top = 1.0
-content_margin_bottom = 1.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
 bg_color = Color( 0.231373, 0.223529, 0.254902, 1 )
 border_width_left = 1
 border_width_top = 1
@@ -138,7 +138,7 @@ shadow_color = Color( 0.0862745, 0.0823529, 0.0823529, 0.607843 )
 shadow_size = 1
 anti_aliasing = false
 
-[sub_resource type="Image" id=609]
+[sub_resource type="Image" id=17]
 data = {
 "data": PoolByteArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 76, 255, 255, 255, 17, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 17, 255, 255, 255, 76, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 76, 255, 255, 255, 228, 255, 255, 255, 188, 255, 255, 255, 17, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 17, 255, 255, 255, 188, 255, 255, 255, 228, 255, 255, 255, 76, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 18, 255, 255, 255, 188, 255, 255, 255, 229, 255, 255, 255, 187, 255, 255, 255, 17, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 17, 255, 255, 255, 187, 255, 255, 255, 229, 255, 255, 255, 188, 255, 255, 255, 18, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 19, 255, 255, 255, 188, 255, 255, 255, 229, 255, 255, 255, 185, 255, 255, 255, 17, 255, 255, 255, 17, 255, 255, 255, 186, 255, 255, 255, 229, 255, 255, 255, 188, 255, 255, 255, 19, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 19, 255, 255, 255, 190, 255, 255, 255, 229, 255, 255, 255, 185, 255, 255, 255, 185, 255, 255, 255, 229, 255, 255, 255, 189, 255, 255, 255, 19, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 19, 255, 255, 255, 191, 255, 255, 255, 229, 255, 255, 255, 229, 255, 255, 255, 190, 255, 255, 255, 19, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 17, 255, 255, 255, 188, 255, 255, 255, 229, 255, 255, 255, 229, 255, 255, 255, 188, 255, 255, 255, 17, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 17, 255, 255, 255, 188, 255, 255, 255, 229, 255, 255, 255, 188, 255, 255, 255, 188, 255, 255, 255, 229, 255, 255, 255, 187, 255, 255, 255, 17, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 17, 255, 255, 255, 187, 255, 255, 255, 229, 255, 255, 255, 188, 255, 255, 255, 18, 255, 255, 255, 19, 255, 255, 255, 188, 255, 255, 255, 229, 255, 255, 255, 186, 255, 255, 255, 17, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 17, 255, 255, 255, 185, 255, 255, 255, 229, 255, 255, 255, 189, 255, 255, 255, 19, 255, 255, 255, 0, 255, 255, 255, 0, 255, 255, 255, 19, 255, 255, 255, 189, 255, 255, 255, 229, 255, 255, 255, 185, 255, 255, 255, 17, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 76, 255, 255, 255, 229, 255, 255, 255, 190, 255, 255, 255, 19, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 19, 255, 255, 255, 190, 255, 255, 255, 229, 255, 255, 255, 76, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 77, 255, 255, 255, 19, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 19, 255, 255, 255, 77, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 255, 0, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ),
 "format": "RGBA8",
@@ -147,13 +147,13 @@ data = {
 "width": 16
 }
 
-[sub_resource type="ImageTexture" id=590]
+[sub_resource type="ImageTexture" id=18]
 flags = 0
 flags = 0
-image = SubResource( 609 )
+image = SubResource( 17 )
 size = Vector2( 16, 16 )
 
-[sub_resource type="StyleBoxFlat" id=599]
+[sub_resource type="StyleBoxFlat" id=19]
 content_margin_left = 4.0
 content_margin_right = 4.0
 content_margin_top = 4.0
@@ -180,9 +180,9 @@ Button/constants/hseparation = 2
 Button/fonts/font = null
 Button/styles/disabled = null
 Button/styles/focus = null
-Button/styles/hover = SubResource( 591 )
-Button/styles/normal = SubResource( 592 )
-Button/styles/pressed = SubResource( 591 )
+Button/styles/hover = SubResource( 1 )
+Button/styles/normal = SubResource( 2 )
+Button/styles/pressed = SubResource( 1 )
 CheckBox/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
 CheckBox/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 CheckBox/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
@@ -197,10 +197,10 @@ CheckBox/icons/radio_unchecked = null
 CheckBox/icons/unchecked = null
 CheckBox/styles/disabled = null
 CheckBox/styles/focus = null
-CheckBox/styles/hover = SubResource( 600 )
-CheckBox/styles/hover_pressed = SubResource( 601 )
-CheckBox/styles/normal = SubResource( 602 )
-CheckBox/styles/pressed = SubResource( 603 )
+CheckBox/styles/hover = SubResource( 3 )
+CheckBox/styles/hover_pressed = SubResource( 4 )
+CheckBox/styles/normal = SubResource( 5 )
+CheckBox/styles/pressed = SubResource( 6 )
 CheckButton/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
 CheckButton/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 CheckButton/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
@@ -215,10 +215,10 @@ CheckButton/icons/on = null
 CheckButton/icons/on_disabled = null
 CheckButton/styles/disabled = null
 CheckButton/styles/focus = null
-CheckButton/styles/hover = SubResource( 604 )
-CheckButton/styles/hover_pressed = SubResource( 605 )
-CheckButton/styles/normal = SubResource( 606 )
-CheckButton/styles/pressed = SubResource( 607 )
+CheckButton/styles/hover = SubResource( 7 )
+CheckButton/styles/hover_pressed = SubResource( 8 )
+CheckButton/styles/normal = SubResource( 9 )
+CheckButton/styles/pressed = SubResource( 10 )
 FileDialog/colors/file_icon_modulate = Color( 1, 1, 1, 1 )
 FileDialog/colors/files_disabled = Color( 0, 0, 0, 0.7 )
 FileDialog/colors/folder_icon_modulate = Color( 1, 1, 1, 1 )
@@ -253,7 +253,7 @@ OptionButton/styles/focus = null
 OptionButton/styles/hover = null
 OptionButton/styles/normal = null
 OptionButton/styles/pressed = null
-Panel/styles/panel = SubResource( 593 )
+Panel/styles/panel = SubResource( 11 )
 PanelContainer/styles/panel = ExtResource( 1 )
 PopupMenu/colors/font_color = Color( 0.88, 0.88, 0.88, 1 )
 PopupMenu/colors/font_color_accel = Color( 0.7, 0.7, 0.7, 0.8 )
@@ -268,13 +268,13 @@ PopupMenu/icons/radio_checked = null
 PopupMenu/icons/radio_unchecked = null
 PopupMenu/icons/submenu = null
 PopupMenu/icons/unchecked = null
-PopupMenu/styles/hover = SubResource( 594 )
+PopupMenu/styles/hover = SubResource( 12 )
 PopupMenu/styles/labeled_separator_left = null
 PopupMenu/styles/labeled_separator_right = null
-PopupMenu/styles/panel = SubResource( 595 )
+PopupMenu/styles/panel = SubResource( 13 )
 PopupMenu/styles/panel_disabled = null
-PopupMenu/styles/separator = SubResource( 596 )
-PopupPanel/styles/panel = SubResource( 597 )
+PopupMenu/styles/separator = SubResource( 14 )
+PopupPanel/styles/panel = SubResource( 15 )
 TabContainer/colors/font_color_bg = Color( 0.69, 0.69, 0.69, 1 )
 TabContainer/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
 TabContainer/colors/font_color_fg = Color( 0.94, 0.94, 0.94, 1 )
@@ -292,7 +292,7 @@ TabContainer/icons/menu = null
 TabContainer/icons/menu_highlight = null
 TabContainer/styles/panel = ExtResource( 1 )
 TabContainer/styles/tab_bg = ExtResource( 3 )
-TabContainer/styles/tab_disabled = SubResource( 608 )
+TabContainer/styles/tab_disabled = SubResource( 16 )
 TabContainer/styles/tab_fg = ExtResource( 2 )
 Tabs/colors/font_color_bg = Color( 0.69, 0.69, 0.69, 1 )
 Tabs/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
@@ -358,6 +358,6 @@ WindowDialog/constants/close_v_ofs = 18
 WindowDialog/constants/scaleborder_size = 4
 WindowDialog/constants/title_height = 20
 WindowDialog/fonts/title_font = null
-WindowDialog/icons/close = SubResource( 590 )
-WindowDialog/icons/close_highlight = SubResource( 590 )
-WindowDialog/styles/panel = SubResource( 599 )
+WindowDialog/icons/close = SubResource( 18 )
+WindowDialog/icons/close_highlight = SubResource( 18 )
+WindowDialog/styles/panel = SubResource( 19 )
