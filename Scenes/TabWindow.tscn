@@ -41,5 +41,4 @@ __meta__ = {
 }
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
-[connection signal="gui_input" from="TextEdit" to="." method="_on_TextEdit_gui_input"]
 [connection signal="text_changed" from="TextEdit" to="." method="_on_TextEdit_text_changed"]
